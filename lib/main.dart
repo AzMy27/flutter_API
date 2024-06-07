@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Weather App',
+      title: 'Weather App ',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: false,
@@ -31,7 +31,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _cityController = TextEditingController();
-  String _cityName = 'Pekanbaru';
+  String _cityName = 'dumai';
 
   void _searchWeather() {
     setState(() {
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Weather App'),
+        title: const Text('Weather App Azmi'),
         centerTitle: true,
       ),
       body: Padding(

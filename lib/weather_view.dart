@@ -48,6 +48,7 @@ class WeatherView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Card(
+        color: Colors.blue.shade50,
         elevation: 4,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
@@ -61,48 +62,75 @@ class WeatherView extends StatelessWidget {
               Center(
                 child: Text(
                   'City: ${data?.cityName}',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(height: 10),
               Text(
-                'Weather: ${data?.main} - ${data?.description}',
-                style: TextStyle(fontSize: 18),
+                'Cuaca: ${data?.main} - ${data?.description}',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 5),
               Text(
-                'Temperature: ${data?.tempCelsius.toStringAsFixed(2)}°C',
-                style: TextStyle(fontSize: 18),
+                'Suhu: ${data?.tempCelsius.toStringAsFixed(2)}°C',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 5),
               Text(
-                'Feels Like: ${data?.feelsLikeCelsius.toStringAsFixed(2)}°C',
-                style: TextStyle(fontSize: 18),
+                'Terasa: ${data?.feelsLikeCelsius.toStringAsFixed(2)}°C',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 5),
               Text(
-                'Min Temperature: ${data?.tempMinCelsius.toStringAsFixed(2)}°C',
-                style: TextStyle(fontSize: 18),
+                'Suhu Minimum: ${data?.tempMinCelsius.toStringAsFixed(2)}°C',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 5),
               Text(
-                'Max Temperature: ${data?.tempMaxCelsius.toStringAsFixed(2)}°C',
-                style: TextStyle(fontSize: 18),
+                'Suhu Maksimum: ${data?.tempMaxCelsius.toStringAsFixed(2)}°C',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 5),
               Text(
-                'Pressure: ${data?.pressure} hPa',
-                style: TextStyle(fontSize: 18),
+                'Tekanan: ${data?.pressure} hPa',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 5),
               Text(
-                'Humidity: ${data?.humidity}%',
-                style: TextStyle(fontSize: 18),
+                'Kelembapan: ${data?.humidity}%',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 5),
               Text(
-                'Wind Speed: ${data?.windSpeed} m/s',
-                style: TextStyle(fontSize: 18),
+                'Kecepatan angin: ${data?.windSpeed} m/s',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),
