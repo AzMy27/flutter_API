@@ -71,22 +71,22 @@ class WeatherView extends StatelessWidget {
               ),
               SizedBox(height: 5),
               Text(
-                'Temperature: ${data?.temp}°K',
+                'Temperature: ${data?.tempCelsius.toStringAsFixed(2)}°C',
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(height: 5),
               Text(
-                'Feels Like: ${data?.feelsLike}°K',
+                'Feels Like: ${data?.feelsLikeCelsius.toStringAsFixed(2)}°C',
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(height: 5),
               Text(
-                'Min Temperature: ${data?.tempMin}°K',
+                'Min Temperature: ${data?.tempMinCelsius.toStringAsFixed(2)}°C',
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(height: 5),
               Text(
-                'Max Temperature: ${data?.tempMax}°K',
+                'Max Temperature: ${data?.tempMaxCelsius.toStringAsFixed(2)}°C',
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(height: 5),

@@ -31,7 +31,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _cityController = TextEditingController();
-  String _cityName = 'Bekasi';
+  String _cityName = 'Pekanbaru';
 
   void _searchWeather() {
     setState(() {
@@ -44,27 +44,41 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Weather App'),
+        centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: TextField(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
               controller: _cityController,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 hintText: 'Cari Kota',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                prefixIcon: Icon(Icons.search),
               ),
             ),
-          ),
-          ElevatedButton(
-            onPressed: _searchWeather,
-            child: const Text('Cari'),
-          ),
-          Expanded(
-            child: WeatherView(cityName: _cityName),
-          ),
-        ],
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: _searchWeather,
+              style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Text('Cari', style: TextStyle(fontSize: 16)),
+            ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: WeatherView(cityName: _cityName),
+            ),
+          ],
+        ),
       ),
     );
   }

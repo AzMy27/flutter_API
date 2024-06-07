@@ -37,4 +37,9 @@ class Weather {
       cityName: json['name'],
     );
   }
+
+  double get tempCelsius => temp - 273.15;
+  double get feelsLikeCelsius => feelsLike - 273.15;
+  double get tempMinCelsius => tempMin - 273.15;
+  double get tempMaxCelsius => tempMax - 273.15;
 }
